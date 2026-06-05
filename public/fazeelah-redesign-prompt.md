@@ -119,7 +119,7 @@ export const school = {
   tagline: "Education With Values",
   subTagline: "More than Just Education — Value Based Learning",
   address: "Bathalpalli Road, Nagalur Village, Dharmavaram 515671, Sri Sathya Sai District, Andhra Pradesh",
-  phone: ["70753-55455", "72077-44544"],
+  phone: ["70753-55455", "75077-44544"],
   whatsapp: "917075355455",
   email: {
     general: "fazeelahschool@gmail.com",
@@ -429,7 +429,7 @@ Section padding: `py-16 md:py-24` | Container: `max-w-7xl mx-auto px-4 md:px-8 x
 ## ADDITIONAL IMPLEMENTATION NOTES
 
 1. **WhatsApp links:** Always use `https://wa.me/917075355455` (with country code 91)
-2. **Tel links:** `tel:+917075355455` and `tel:+917207744544`
+2. **Tel links:** `tel:+917075355455` and `tel:+917507744544`
 3. **Mailto links:** Use schoolData emails with `mailto:` prefix
 4. **Image placeholders:** All Unsplash images must use `loading="lazy"` and have explicit `width` + `height` or `aspect-ratio` CSS to prevent layout shift
 5. **SEO:** Add `<title>` and `<meta name="description">` per page using React Helmet or direct DOM manipulation in `useEffect`

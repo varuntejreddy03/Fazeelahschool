@@ -48,15 +48,15 @@ export default function Footer() {
               <p className="flex items-start gap-2"><MapPin size={14} className="mt-1 shrink-0" />{school.address}</p>
               <p className="flex items-center gap-2"><Phone size={14} />{school.phone[0]}</p>
               <p className="flex items-center gap-2"><Mail size={14} />{school.email.general}</p>
-              <p className="mt-3">Mon–Sat: {school.hours.weekdays}</p>
+              <p className="mt-3">Mon-Sat: {school.hours.weekdays}</p>
               <p>Sunday: {school.hours.sunday}</p>
             </div>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 mt-12 pt-8 border-t border-white/10 text-center">
-          <p className="font-body text-white/50 text-sm">© 2026 {school.name}. All Rights Reserved.</p>
-          <p className="font-serif italic text-white/30 text-xs mt-1">Built with ♥ for excellence in education</p>
+          <p className="font-body text-white/50 text-sm">(c) 2026 {school.name}. All Rights Reserved.</p>
+          <p className="font-serif italic text-white/30 text-xs mt-1">Built for excellence in education</p>
         </div>
       </motion.footer>
     </>

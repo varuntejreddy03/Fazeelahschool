@@ -1,45 +1,267 @@
+const hoursText = "Mon - Sat: 09:00 AM - 05:00 PM | Sunday: Closed";
+
 export const school = {
   name: "FAZEELAH ENGLISH MEDIUM SCHOOL",
+  short: "Fazeelah School",
   shortName: "Fazeelah School",
+
+  hero: {
+    headline: "Your Child's Journey to Success Begins Here",
+    subheading:
+      "Fazeelah English Medium School provides quality education, modern infrastructure, value-based learning, and a safe environment where every child can learn, grow, and succeed.",
+    cta1: "Apply for Admission",
+    cta2: "Schedule a Campus Visit",
+  },
+
   tagline: "Education With Values",
-  subTagline: "More than Just Education - Value Based Learning",
-  address: "Bathalpalli Road, Nagalur Village, Dharmavaram 515671, Sri Sathya Sai District, Andhra Pradesh",
-  phone: ["70753-55455", "72077-44544"],
+  subTagline: "A Foundation for Life-Long Success",
+
+  address: "Bathalapalli Road, Nagalur Village, Dharmavaram 515672, Sri Sathya Sai District, AP",
+  phones: ["+91 70753 55455", "+91 75077 44544"],
+  phone: ["+91 70753 55455", "+91 75077 44544"],
   whatsapp: "917075355455",
+  emails: {
+    general: "fazeelahschool@gmail.com",
+    admissions: "Admissions@fazeelah.com",
+    principal: "principal@fazeelah.com",
+    admin: "admin@fazeelah.com",
+  },
   email: {
     general: "fazeelahschool@gmail.com",
     admissions: "Admissions@fazeelah.com",
     principal: "principal@fazeelah.com",
     admin: "admin@fazeelah.com",
   },
-  website: "www.Fazeelah.com",
+  website: "www.fazeelah.com",
+
+  stats: [
+    { value: "500+", label: "Happy Students" },
+    { value: "30+", label: "Expert Teachers" },
+    { value: "10+", label: "Years of Excellence" },
+    { value: "98%", label: "Pass Rate" },
+  ],
+
+  pillars: [
+    { icon: "GraduationCap", label: "Quality Education" },
+    { icon: "Heart", label: "Values & Character" },
+    { icon: "Sprout", label: "Holistic Development" },
+    { icon: "Star", label: "Bright Futures" },
+  ],
+
   hours: {
+    text: hoursText,
     weekdays: "09:00 AM - 05:00 PM",
     saturday: "09:00 AM - 05:00 PM",
     sunday: "Closed",
-    note: "2nd Sunday is Visiting Day for Parents (Day Stay Allowed)",
+    note: "Sunday is closed",
   },
+  hoursText,
+
+  admissionsYear: "2026 - 2027",
+  admissionsRange: "Nursery to 7th Class",
   admissions: {
-    year: "2026 - 2027",
+    year: "2026-2027",
+    range: "Nursery to 7th Class",
     open: true,
     cta: "Message us on WhatsApp to apply",
   },
-  stats: [
-    { label: "Acre Campus", value: "2" },
-    { label: "Certified Faculty", value: "50+" },
-    { label: "Years of Excellence", value: "10+" },
-    { label: "Students Enrolled", value: "500+" },
+
+  about:
+    "Fazeelah English Medium School is dedicated to providing quality education in a safe, nurturing, and inspiring learning environment. We focus on academic excellence, character development, and the overall growth of every child. With experienced educators, modern teaching methods, and a student-centered approach, we strive to help learners build confidence, knowledge, and essential life skills for a successful future. At Fazeelah, we believe every child has unique potential, and our goal is to empower students to become responsible, confident, and lifelong learners.",
+  philosophy:
+    "Fazeelah English Medium School is dedicated to providing quality education in a safe, nurturing, and inspiring learning environment. We focus on academic excellence, character development, and the overall growth of every child.",
+  faculty:
+    "Our experienced educators use modern teaching methods and a student-centered approach to help learners build confidence, knowledge, and essential life skills.",
+
+  vision:
+    "To be a leading educational institution that nurtures knowledgeable, confident, and responsible individuals who contribute positively to society and excel in a rapidly changing world.",
+
+  mission: [
+    "To provide high-quality education in a safe, inclusive, and supportive environment.",
+    "To foster academic excellence, critical thinking, and creativity among students.",
+    "To instill strong moral values, discipline, and respect for others.",
+    "To encourage holistic development through academics, sports, and co-curricular activities.",
+    "To empower every student with the skills and confidence needed for lifelong learning and success.",
   ],
+  missionText:
+    "To provide high-quality education in a safe, inclusive, and supportive environment while fostering academic excellence, critical thinking, creativity, strong moral values, discipline, and holistic development.",
+  community:
+    "We are proud to be part of a diverse and inclusive community that values collaboration, empathy, and respect.",
+
+  principal: {
+    name: "Principal",
+    message:
+      "At Fazeelah English Medium School, we believe in empowering young minds with knowledge, values and confidence to succeed in a rapidly changing world. Together, let us build a better tomorrow for our children.",
+  },
+
+  whyFazeelah: [
+    "Trusted by parents, loved by students",
+    "Focus on academics, values & life skills",
+    "Individual attention and overall growth",
+    "Safe, secure and nurturing environment",
+  ],
+
+  whyChooseUs: [
+    {
+      icon: "Landmark",
+      title: "Spacious & Secure Campus",
+      desc: "Spread across 2 acres, our campus provides a safe, comfortable, and inspiring environment for learning and growth.",
+    },
+    {
+      icon: "BookOpen",
+      title: "Excellent Academic Curriculum",
+      desc: "A well-structured curriculum designed to develop knowledge, critical thinking, creativity, and communication skills.",
+    },
+    {
+      icon: "Monitor",
+      title: "Smart Digital Learning",
+      desc: "Digital classrooms and interactive panel boards enhance learning through technology-driven education.",
+    },
+    {
+      icon: "Cpu",
+      title: "Advanced Computer Lab",
+      desc: "Modern computer facilities help students develop essential digital skills for the future.",
+    },
+    {
+      icon: "Wind",
+      title: "Fully Air-Conditioned Classrooms",
+      desc: "Comfortable learning spaces designed to keep students focused and productive throughout the year.",
+    },
+    {
+      icon: "Bus",
+      title: "Safe Transportation Facility",
+      desc: "Reliable school bus services ensure safe and convenient travel for students.",
+    },
+    {
+      icon: "Trophy",
+      title: "Sports & Physical Development",
+      desc: "Dedicated sports facilities and qualified coaches encourage fitness, teamwork, and leadership.",
+    },
+    {
+      icon: "Shield",
+      title: "24/7 Safety & Surveillance",
+      desc: "Round-the-clock CCTV monitoring and secure campus management provide peace of mind for parents.",
+    },
+  ],
+
+  classes: [
+    { label: "Nursery", color: "bg-rose-50 text-rose-700 border-rose-200" },
+    { label: "LKG / UKG", color: "bg-orange-50 text-orange-700 border-orange-200" },
+    { label: "Class I - II", color: "bg-amber-50 text-amber-700 border-amber-200" },
+    { label: "Class III - IV", color: "bg-lime-50 text-lime-700 border-lime-200" },
+    { label: "Class V - VI", color: "bg-teal-50 text-teal-700 border-teal-200" },
+    { label: "Class VII", color: "bg-blue-50 text-blue-700 border-blue-200" },
+  ],
+
   facilities: [
-    { icon: "Monitor", label: "Digital Panel Boards" },
-    { icon: "BookOpen", label: "Excellent Curriculum" },
-    { icon: "Wind", label: "Fully Air-Conditioned" },
-    { icon: "Shield", label: "24/7 CCTV Surveillance" },
-    { icon: "Trophy", label: "Sports Arena" },
-    { icon: "Bus", label: "Bus Transportation" },
-    { icon: "Home", label: "Hostel for Boys" },
-    { icon: "Cpu", label: "Computer Lab" },
+    {
+      icon: "Users",
+      title: "Comfortable Classrooms",
+      label: "Comfortable Classrooms",
+      desc: "Fully air-conditioned classrooms for a conducive learning environment.",
+      image: "school-angle-front-left.png",
+    },
+    {
+      icon: "Home",
+      title: "Semi-Boarding & Hostel",
+      label: "Semi-Boarding & Hostel",
+      desc: "Semi-boarding facility on campus and a safe, secure hostel for boys.",
+      image: "hostel-bunk-beds.jpeg",
+    },
+    {
+      icon: "Shield",
+      title: "Secure Campus",
+      label: "Secure Campus",
+      desc: "Campus secured with CCTV cameras and round-the-clock monitoring.",
+      image: "facility-secure-campus.jpg",
+    },
+    {
+      icon: "Salad",
+      title: "Nutritious Food",
+      label: "Nutritious Food",
+      desc: "Nutritious and balanced meals with hygiene and care - eat healthy, stay strong.",
+      image: "food-healthy-tray.jpeg",
+    },
+    {
+      icon: "Bus",
+      title: "Safe Transport",
+      label: "Safe Transport",
+      desc: "Reliable and safe bus transportation for day-scholars across all routes.",
+      image: "facility-safe-transport.jpg",
+    },
+    {
+      icon: "Trophy",
+      title: "Sports Arena",
+      label: "Sports Arena",
+      desc: "Vast sports facilities encouraging physical development and teamwork.",
+      image: "facility-sports-arena.jpg",
+    },
+    {
+      icon: "FlaskConical",
+      title: "Modern Science Lab",
+      label: "Modern Science Lab",
+      desc: "State-of-the-art lab for hands-on science experiments and discovery.",
+      image: "facility-science-lab.jpg",
+    },
+    {
+      icon: "BookMarked",
+      title: "Modern Library",
+      label: "Modern Library",
+      desc: "Peaceful learning atmosphere with rich knowledge resources and comfortable seating.",
+      image: "facility-library.jpg",
+    },
   ],
+
+  hostel: {
+    headline: "A Home Away From Home",
+    desc: "Our hostel offers a safe, comfortable, and nurturing environment where students can focus on academics while enjoying quality care and modern amenities.",
+    features: [
+      "Comfortable Bunk Beds",
+      "Hygienic & Nutritious Meals",
+      "Weekly Non-Veg Menu",
+      "Evening Snacks",
+      "Air-Conditioned Rooms",
+      "Clean & Healthy Environment",
+      "24/7 Security & CCTV Surveillance",
+      "Dedicated Study Areas",
+      "Parent Visiting Facility",
+    ],
+    images: {
+      main: "hostel-bunk-beds.jpeg",
+      dining: "hostel-dining-hall.jpeg",
+    },
+  },
+
+  testimonials: [
+    {
+      name: "Fatima Begum",
+      role: "Parent of Class VI Student",
+      text: "Fazeelah School has truly transformed my child. The teachers are very dedicated and the curriculum is excellent. We are proud parents.",
+      stars: 5,
+    },
+    {
+      name: "Rauf Kumar",
+      role: "Parent of Class IV Student",
+      text: "The school provides a perfect balance of academics and extracurricular activities. My son has grown so much in confidence this year.",
+      stars: 5,
+    },
+    {
+      name: "Sameera Shaheen",
+      role: "Parent of Class II Student",
+      text: "The nursery program is exceptional. Teachers are patient, caring and truly understand how young children learn best. Highly recommend.",
+      stars: 5,
+    },
+  ],
+
+  gallery: [
+    "school-angle-front-wide.png",
+    "school-angle-front-left.png",
+    "school-angle-aerial.png",
+    "students-campus-run.jpeg",
+    "hostel-dining-hall.jpeg",
+    "food-healthy-tray.jpeg",
+  ],
+
   navLinks: [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
@@ -47,9 +269,4 @@ export const school = {
     { label: "Mission", path: "/mission" },
     { label: "Contact Us", path: "/contact" },
   ],
-  philosophy: "At FAZEELAH ENGLISH MEDIUM SCHOOL, we believe that education is the key to unlocking a world of opportunity. Every student has the potential to achieve greatness, and we are committed to helping them reach their goals and aspirations.",
-  faculty: "Our faculty members are dedicated educators deeply committed to their students' success. With years of experience and a passion for teaching, they bring a wealth of knowledge and expertise to the classroom.",
-  vision: "To provide a world-class education that empowers students to become leaders and innovators in their communities. We believe in fostering a love of learning and a commitment to excellence in all that we do.",
-  mission: "To provide a challenging and supportive learning environment that empowers students to become critical thinkers, lifelong learners, and responsible citizens. We are committed to fostering a love of learning and a desire to make a positive impact on the world.",
-  community: "We are proud to be part of a diverse and inclusive community that values collaboration, empathy, and respect.",
 };

@@ -1,94 +1,83 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { CheckCircle2, GraduationCap, Heart, Sprout, Star } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
 import { school } from '../data/schoolData';
 import { fadeUp, staggerContainer } from '../hooks/useScrollReveal';
 
-const pillars = [
-  { title: 'Critical Thinkers', desc: 'Developing analytical minds that question and innovate.' },
-  { title: 'Lifelong Learners', desc: 'Instilling curiosity and love for continuous learning.' },
-  { title: 'Responsible Citizens', desc: 'Building character and social responsibility.' },
-];
-
-const steps = [
-  { num: '01', title: 'Not Just Books', body: 'We focus on thinking, creativity, and real understanding.' },
-  { num: '02', title: 'Real Learning', body: 'Creativity and real-world skills for the future.' },
-  { num: '03', title: 'Beyond Academics', body: 'Character, community, and values-based education.' },
-];
+const pillarIcons = { GraduationCap, Heart, Sprout, Star };
 
 export default function Mission() {
   return (
     <motion.main initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}>
-      {/* Hero */}
-      <section className="bg-brand-navy pt-32 pb-16" style={{
-        backgroundImage: 'radial-gradient(circle at 50% 80%, rgba(201,168,76,0.05) 0%, transparent 50%)'
-      }}>
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <p className="font-body text-white/50 text-sm mb-4"><Link to="/" className="hover:text-brand-gold">Home</Link> / Mission</p>
-          <h1 className="font-display text-5xl md:text-6xl text-white">Where Learning Comes First</h1>
-          <div className="w-16 h-1 bg-brand-gold mt-4" />
+      <section className="relative overflow-hidden bg-brand-navy pt-32 pb-20">
+        <img src="/images/food-healthy-tray.jpeg" alt="Healthy meals at Fazeelah" className="absolute inset-0 h-full w-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/65" />
+        <div className="relative mx-auto max-w-7xl px-4 md:px-8">
+          <p className="mb-4 font-body text-sm text-white/55"><Link to="/" className="hover:text-brand-gold">Home</Link> / Mission</p>
+          <h1 className="max-w-3xl font-display text-5xl text-white md:text-6xl">Empowering Every Student for Lifelong Learning</h1>
+          <div className="mt-5 h-1 w-16 bg-brand-gold" />
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="rounded-2xl overflow-hidden shadow-brand">
-            <img
-              src="/images/school-front.jpeg"
-              alt="Student working"
-              className="w-full aspect-[4/3] object-cover"
-              loading="lazy"
-            />
+      <section className="bg-white py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:px-8 lg:grid-cols-2">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="overflow-hidden rounded-2xl shadow-brand">
+            <img src="/images/school-angle-front-left.png" alt="Side angle of Fazeelah school" className="aspect-[4/3] w-full object-cover" loading="lazy" />
           </motion.div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <SectionHeading eyebrow="Our Mission" title="Empowering Young Minds" centered={false} />
-            <p className="font-body text-brand-muted text-lg leading-relaxed">{school.mission}</p>
-          </motion.div>
-        </div>
-
-        {/* Pillars */}
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}
-          className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
-        >
-          {pillars.map((p, i) => (
-            <motion.div key={p.title} variants={fadeUp} className="relative bg-brand-cream rounded-2xl p-8 border-l-4 border-brand-gold overflow-hidden">
-              <span className="absolute top-4 right-6 font-display text-5xl text-brand-gold/20 select-none">{String(i + 1).padStart(2, '0')}</span>
-              <h3 className="font-display text-xl text-brand-navy mb-2">{p.title}</h3>
-              <p className="font-body text-brand-muted leading-relaxed">{p.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      {/* Approach */}
-      <section className="py-16 md:py-24 bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <SectionHeading eyebrow="Our Approach" title="How We Teach" />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {steps.map((s) => (
-              <motion.div key={s.num} variants={fadeUp} className="text-center">
-                <span className="inline-block font-display text-brand-gold text-2xl mb-2">{s.num}</span>
-                <div className="w-8 h-px bg-brand-gold/40 mx-auto my-2" />
-                <h4 className="font-display text-lg text-brand-navy mb-2">{s.title}</h4>
-                <p className="font-body text-brand-muted leading-relaxed">{s.body}</p>
-              </motion.div>
-            ))}
+            <SectionHeading eyebrow="Our Mission" title="High-Quality Education With Values" centered={false} />
+            <div className="space-y-4">
+              {school.mission.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-1 shrink-0 text-brand-gold" size={22} />
+                  <p className="font-body text-lg leading-relaxed text-brand-muted">{item}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 md:py-24 bg-brand-navy text-center">
-        <h2 className="font-display text-3xl md:text-4xl text-white">Ready to Join the Fazeelah Family?</h2>
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
+      <section className="bg-brand-cream py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <SectionHeading eyebrow="Brand Pillars" title="How We Shape Growth" subtitle="The brochure highlights four pillars that guide the school experience." />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 gap-6 md:grid-cols-4">
+            {school.pillars.map((pillar) => {
+              const Icon = pillarIcons[pillar.icon] || Star;
+              return (
+                <motion.div key={pillar.label} variants={fadeUp} className="border border-brand-light bg-white p-7 text-center shadow-brand">
+                  <Icon className="mx-auto mb-4 text-brand-gold" size={34} strokeWidth={1.8} />
+                  <h3 className="font-display text-2xl text-brand-navy">{pillar.label}</h3>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-brand-navy py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:px-8 lg:grid-cols-2">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <SectionHeading eyebrow="Principal's Message" title="Building a Better Tomorrow" centered={false} dark />
+            <p className="font-serif text-2xl italic leading-relaxed text-white/80">{school.principal.message}</p>
+            <div className="mb-4 mt-6 h-px w-12 bg-brand-gold" />
+            <p className="font-body font-semibold text-white">Principal, Fazeelah School</p>
+          </motion.div>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <img src="/images/hostel-dining-hall.jpeg" alt="Fazeelah dining and care facility" className="h-80 w-full rounded-2xl object-cover" loading="lazy" />
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-brand-gold py-12 text-center">
+        <h2 className="font-display text-3xl text-brand-navy">Admissions Open {school.admissions.year} - {school.admissions.range}</h2>
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <a href={`https://wa.me/${school.whatsapp}`} target="_blank" rel="noopener noreferrer">
             <Button variant="primary">Apply for Admissions</Button>
           </a>
-          <Link to="/contact"><Button variant="outline">Contact Us</Button></Link>
+          <Link to="/contact"><Button variant="outline" className="border-brand-navy text-brand-navy hover:border-brand-navy">Contact Us</Button></Link>
         </div>
       </section>
     </motion.main>

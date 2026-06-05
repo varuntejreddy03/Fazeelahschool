@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { CheckCircle2, Heart, ShieldCheck, Star } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
@@ -9,89 +10,69 @@ import { fadeUp, staggerContainer } from '../hooks/useScrollReveal';
 export default function AboutUs() {
   return (
     <motion.main initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}>
-      {/* Hero Banner */}
-      <section className="bg-brand-navy pt-32 pb-16 relative" style={{
-        backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(45,125,210,0.1) 0%, transparent 50%)'
-      }}>
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <p className="font-body text-white/50 text-sm mb-4"><Link to="/" className="hover:text-brand-gold">Home</Link> / About Us</p>
-          <h1 className="font-display text-5xl md:text-6xl text-white">Discover Fazeelah School</h1>
-          <div className="w-16 h-1 bg-brand-gold mt-4" />
+      <section className="relative overflow-hidden bg-brand-navy pt-32 pb-20">
+        <img
+          src="/images/school-angle-front-left.png"
+          alt="Fazeelah English Medium School building"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/55" />
+        <div className="relative mx-auto max-w-7xl px-4 md:px-8">
+          <p className="mb-4 font-body text-sm text-white/55"><Link to="/" className="hover:text-brand-gold">Home</Link> / About Us</p>
+          <h1 className="max-w-3xl font-display text-5xl text-white md:text-6xl">A Safe Place to Learn, Grow, and Succeed</h1>
+          <div className="mt-5 h-1 w-16 bg-brand-gold" />
+          <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-white/70">{school.about}</p>
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="bg-white py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:px-8 lg:grid-cols-2">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <SectionHeading eyebrow="Our Philosophy" title="What We Believe" centered={false} />
-            <p className="font-body text-brand-muted text-lg leading-relaxed relative">
-              <span className="absolute -left-4 -top-4 text-6xl text-brand-gold/20 font-serif">"</span>
-              {school.philosophy}
-            </p>
-          </motion.div>
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="rounded-2xl overflow-hidden">
-            <img
-              src="/images/school-front.jpeg"
-              alt="School building front"
-              className="w-full aspect-[4/3] object-cover"
-              loading="lazy"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Faculty */}
-      <section className="py-16 md:py-24 bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-2 lg:order-1 flex flex-col items-center gap-4">
-            <div className="rounded-2xl overflow-hidden w-full aspect-[4/3]">
-              <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800" alt="School" className="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div className="rounded-2xl overflow-hidden w-64 shadow-brand">
-              <img src="/images/notice-hiring.jpeg" alt="We Are Hiring" className="w-full object-cover" loading="lazy" />
-            </div>
-          </motion.div>
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-1 lg:order-2">
-            <SectionHeading eyebrow="Our Faculty" title="Dedicated Educators" centered={false} />
-            <p className="font-body text-brand-muted text-lg leading-relaxed mb-6">{school.faculty}</p>
-            <ul className="space-y-2 font-body text-brand-navy">
-              {['Experienced Educators', 'Passionate About Teaching', 'Student-First Approach'].map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <span className="text-brand-gold">✓</span> {item}
-                </li>
+            <SectionHeading eyebrow="Our Story" title="Education With Values" centered={false} />
+            <p className="font-body text-lg leading-relaxed text-brand-muted">{school.philosophy}</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {school.whyFazeelah.map((item) => (
+                <div key={item} className="flex items-start gap-3 border border-brand-light bg-brand-cream p-4">
+                  <CheckCircle2 className="mt-1 shrink-0 text-brand-gold" size={20} />
+                  <p className="font-body text-sm font-semibold leading-relaxed text-brand-navy">{item}</p>
+                </div>
               ))}
-            </ul>
+            </div>
+          </motion.div>
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-4">
+            <img src="/images/school-angle-aerial.png" alt="Aerial angle of Fazeelah school" className="h-72 w-full rounded-2xl object-cover shadow-brand" loading="lazy" />
+            <div className="grid gap-4 sm:grid-cols-2">
+              <img src="/images/students-campus-run.jpeg" alt="Students at Fazeelah campus" className="h-44 w-full rounded-2xl object-cover" loading="lazy" />
+              <img src="/images/food-healthy-tray.jpeg" alt="Nutritious food at Fazeelah" className="h-44 w-full rounded-2xl object-cover" loading="lazy" />
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <SectionHeading eyebrow="Our Core" title="Our Values" />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="bg-brand-cream py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <SectionHeading eyebrow="Our Core" title="What Guides Us" subtitle="The school combines academic structure with values, safety, and personal attention." />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {[
-              { title: 'Integrity', desc: 'Upholding honesty and strong moral principles in everything we do.' },
-              { title: 'Excellence', desc: 'Striving for the highest standards in academics and character.' },
-              { title: 'Community', desc: 'Building a supportive environment where everyone belongs.' },
-            ].map((v, i) => (
-              <motion.div key={v.title} variants={fadeUp} className="relative bg-brand-cream rounded-2xl p-8 border-l-4 border-brand-gold overflow-hidden">
-                <span className="absolute top-4 right-6 font-display text-5xl text-brand-gold/20 select-none">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="font-display text-xl text-brand-navy mb-2">{v.title}</h3>
-                <p className="font-body text-brand-muted leading-relaxed">{v.desc}</p>
+              { title: 'Values & Character', desc: 'Discipline, respect, confidence, and responsibility are part of everyday learning.', Icon: Heart },
+              { title: 'Secure Environment', desc: 'The campus is designed to be safe, monitored, and comfortable for children.', Icon: ShieldCheck },
+              { title: 'Bright Futures', desc: 'Students build academic strength and life skills for long-term success.', Icon: Star },
+            ].map(({ title, desc, Icon }) => (
+              <motion.div key={title} variants={fadeUp} className="border border-brand-light bg-white p-7 shadow-brand">
+                <Icon className="mb-5 text-brand-gold" size={30} strokeWidth={1.8} />
+                <h3 className="font-display text-2xl text-brand-navy">{title}</h3>
+                <p className="mt-3 font-body leading-relaxed text-brand-muted">{desc}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-brand-gold py-12 text-center">
-        <h2 className="font-display text-3xl text-brand-navy">{school.subTagline}</h2>
+        <h2 className="font-display text-3xl text-brand-navy">Admissions Open {school.admissions.year} - {school.admissions.range}</h2>
         <div className="mt-6">
           <a href={`https://wa.me/${school.whatsapp}`} target="_blank" rel="noopener noreferrer">
-            <Button variant="primary">Apply Now</Button>
+            <Button variant="primary">Apply for Admission</Button>
           </a>
         </div>
       </section>

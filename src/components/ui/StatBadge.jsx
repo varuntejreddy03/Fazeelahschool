@@ -22,10 +22,10 @@ export default function StatBadge({ value, label, isLast }) {
   }, [hasNumber, inView, numericPart, suffix]);
 
   return (
-    <motion.div ref={ref} className={`text-center p-6 ${!isLast ? 'lg:border-r lg:border-white/10' : ''}`}>
-      <p className="font-display text-4xl sm:text-6xl text-brand-gold font-bold">{display}</p>
-      <div className="w-8 h-px bg-brand-gold/40 mx-auto my-2 sm:my-3" />
-      <p className="font-body text-white/70 text-xs sm:text-sm uppercase tracking-widest">{label}</p>
+    <motion.div ref={ref} className={`text-center px-4 py-5 ${!isLast ? 'lg:border-r lg:border-white/10' : ''}`}>
+      <p className="font-display text-4xl text-brand-gold font-bold md:text-5xl">{display}</p>
+      <div className="w-8 h-px bg-brand-gold/40 mx-auto my-2" />
+      <p className="font-body text-white/70 text-xs uppercase tracking-widest">{label}</p>
     </motion.div>
   );
 }
