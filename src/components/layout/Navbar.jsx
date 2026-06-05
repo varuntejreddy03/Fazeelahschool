@@ -15,8 +15,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => setMenuOpen(false), [location]);
-
   return (
     <motion.nav
       initial={{ y: -80 }}
@@ -66,6 +64,7 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
+                  onClick={() => setMenuOpen(false)}
                   className={`font-display text-lg ${location.pathname === link.path ? 'text-brand-gold' : 'text-white/80'}`}
                 >
                   {link.label}

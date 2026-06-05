@@ -4,13 +4,13 @@ import { useRef, useEffect, useState } from 'react';
 export default function StatBadge({ value, label, isLast }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
-  const [display, setDisplay] = useState('0');
+  const numericPart = parseInt(value.replace(/[^0-9]/g, ''));
+  const suffix = value.replace(/[0-9]/g, '');
+  const hasNumber = !Number.isNaN(numericPart);
+  const [display, setDisplay] = useState(hasNumber ? '0' : value);
 
   useEffect(() => {
-    if (!inView) return;
-    const numericPart = parseInt(value.replace(/[^0-9]/g, ''));
-    const suffix = value.replace(/[0-9]/g, '');
-    if (isNaN(numericPart)) { setDisplay(value); return; }
+    if (!inView || !hasNumber) return;
     let current = 0;
     const step = Math.ceil(numericPart / 40);
     const interval = setInterval(() => {
@@ -19,7 +19,7 @@ export default function StatBadge({ value, label, isLast }) {
       setDisplay(current + suffix);
     }, 30);
     return () => clearInterval(interval);
-  }, [inView, value]);
+  }, [hasNumber, inView, numericPart, suffix]);
 
   return (
     <motion.div ref={ref} className={`text-center p-6 ${!isLast ? 'lg:border-r lg:border-white/10' : ''}`}>

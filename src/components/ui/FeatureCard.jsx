@@ -1,21 +1,31 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { fadeUp } from '../../hooks/useScrollReveal';
 
-export default function FeatureCard({ index, title, body, cta, link, isExternal }) {
+export default function FeatureCard({ index, title, body, cta, link, isExternal, Icon }) {
   const Wrapper = isExternal ? 'a' : Link;
   const wrapperProps = isExternal ? { href: link, target: '_blank', rel: 'noopener noreferrer' } : { to: link };
-  const label = cta.replace(' →', '').replace('→', '');
 
   return (
-    <motion.div variants={fadeUp} className="relative bg-white rounded-2xl p-8 border-l-4 border-brand-gold shadow-brand hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-      <span className="absolute top-4 right-6 font-display text-5xl text-brand-gold/20 select-none">
+    <motion.div
+      variants={fadeUp}
+      className="group relative flex min-h-[300px] flex-col overflow-hidden border border-brand-blue/10 bg-white p-7 shadow-brand transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
+      <span className="absolute right-5 top-4 font-display text-6xl text-brand-gold/15 select-none">
         {String(index).padStart(2, '0')}
       </span>
-      <h3 className="font-display text-xl text-brand-navy mb-3">{title}</h3>
-      <p className="font-body text-brand-muted leading-relaxed mb-5">{body}</p>
-      <Wrapper {...wrapperProps} className="relative font-body text-sm text-brand-sky font-medium tracking-wide uppercase after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-brand-sky hover:after:w-full after:transition-all after:duration-300">
-        {label}
+      <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-full bg-brand-navy text-brand-gold shadow-lg shadow-brand-sky/10">
+        {Icon && <Icon size={24} strokeWidth={1.8} />}
+      </div>
+      <h3 className="font-display text-2xl text-brand-navy">{title}</h3>
+      <p className="mt-4 flex-1 font-body leading-relaxed text-brand-muted">{body}</p>
+      <Wrapper
+        {...wrapperProps}
+        className="mt-6 inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.18em] text-brand-sky transition-colors hover:text-brand-blue"
+      >
+        {cta}
+        <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
       </Wrapper>
     </motion.div>
   );
