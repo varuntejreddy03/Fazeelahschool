@@ -108,7 +108,14 @@ export default function Footer() {
             <h4 className="font-body text-xs uppercase tracking-[0.25em] mb-4 text-brand-gold">Contact & Hours</h4>
             <div className="space-y-2 text-sm text-white/70 font-body leading-relaxed">
               <p className="flex items-start gap-2"><MapPin size={14} className="mt-1 shrink-0" />{school.address}</p>
-              <p className="flex items-center gap-2"><Phone size={14} />{school.phone[0]}</p>
+              {school.phones.map((phoneNum) => (
+                <p key={phoneNum} className="flex items-center gap-2">
+                  <Phone size={14} />
+                  <a href={`tel:${phoneNum.replace(/\s+/g, '')}`} className="hover:text-brand-gold transition-colors">
+                    {phoneNum}
+                  </a>
+                </p>
+              ))}
               <p className="flex items-center gap-2"><Mail size={14} />{school.email.general}</p>
               <p className="mt-3">Mon-Sat: {school.hours.weekdays}</p>
               <p>Sunday: {school.hours.sunday}</p>

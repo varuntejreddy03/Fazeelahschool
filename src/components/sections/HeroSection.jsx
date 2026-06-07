@@ -53,16 +53,23 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
-            className="mt-5 flex flex-col gap-3 font-body text-sm text-white/75 sm:flex-row sm:items-center sm:gap-5"
+            className="mt-5 flex flex-col gap-3 font-body text-sm text-white/75"
           >
-            <span className="flex items-center gap-2">
-              <MapPin size={16} className="text-brand-gold" />
-              Dharmavaram, Sri Sathya Sai District, AP
-            </span>
-            <a href="tel:+917075355455" className="flex items-center gap-2 hover:text-brand-gold">
-              <Phone size={16} className="text-brand-gold" />
-              {school.phones[0]}
-            </a>
+            <div className="flex items-start gap-2">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-brand-gold" />
+              <span>{school.address}</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              {school.phones.map((phoneNum, idx) => (
+                <span key={phoneNum} className="flex items-center gap-2">
+                  {idx > 0 && <span className="text-white/30 hidden sm:inline mr-2">|</span>}
+                  <a href={`tel:${phoneNum.replace(/\s+/g, '')}`} className="flex items-center gap-2 hover:text-brand-gold">
+                    <Phone size={16} className="text-brand-gold" />
+                    {phoneNum}
+                  </a>
+                </span>
+              ))}
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,11 +90,11 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative flex min-h-[360px] items-center justify-center overflow-hidden bg-[#dfe8ff] lg:min-h-full">
+        <div className="relative overflow-hidden bg-brand-navy lg:min-h-full">
           <img
             src="/images/school-angle-front-wide.png"
             alt="Fazeelah School campus building"
-            className="h-full max-h-[calc(100vh-5rem)] w-full object-contain object-center"
+            className="w-full h-auto block object-cover object-center lg:absolute lg:inset-0 lg:h-full lg:w-full"
             width="1402"
             height="1124"
           />

@@ -74,7 +74,7 @@ export const school = {
   about:
     "Fazeelah English Medium School is dedicated to providing quality education in a safe, nurturing, and inspiring learning environment. We focus on academic excellence, character development, and the overall growth of every child. With experienced educators, modern teaching methods, and a student-centered approach, we strive to help learners build confidence, knowledge, and essential life skills for a successful future. At Fazeelah, we believe every child has unique potential, and our goal is to empower students to become responsible, confident, and lifelong learners.",
   philosophy:
-    "Fazeelah English Medium School is dedicated to providing quality education in a safe, nurturing, and inspiring learning environment. We focus on academic excellence, character development, and the overall growth of every child.",
+    "Fazeelah English Medium School was founded with a vision to integrate quality academic learning with strong ethical values. We believe that education is not just about academic success, but about shaping character, building confidence, and preparing young minds to become responsible citizens of tomorrow.",
   faculty:
     "Our experienced educators use modern teaching methods and a student-centered approach to help learners build confidence, knowledge, and essential life skills.",
 
@@ -100,10 +100,11 @@ export const school = {
   },
 
   whyFazeelah: [
-    "Trusted by parents, loved by students",
     "Focus on academics, values & life skills",
     "Individual attention and overall growth",
     "Safe, secure and nurturing environment",
+    "Nutritious food & healthy dining",
+    "Semi-boarding & hostel facility",
   ],
 
   whyChooseUs: [
@@ -146,6 +147,16 @@ export const school = {
       icon: "Shield",
       title: "24/7 Safety & Surveillance",
       desc: "Round-the-clock CCTV monitoring and secure campus management provide peace of mind for parents.",
+    },
+    {
+      icon: "Salad",
+      title: "Nutritious Food & Dining",
+      desc: "Hygienic, balanced, and nutritious meals prepared with care to keep students healthy and active.",
+    },
+    {
+      icon: "Home",
+      title: "Semi-Boarding & Hostel",
+      desc: "Comfortable semi-boarding options and a safe, secure boarding facility for boys.",
     },
   ],
 

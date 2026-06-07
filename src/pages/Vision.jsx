@@ -4,8 +4,10 @@ import {
   BookOpen,
   Bus,
   Cpu,
+  Home as HomeIcon,
   Landmark,
   Monitor,
+  Salad,
   Shield,
   Trophy,
   Wind,
@@ -14,7 +16,7 @@ import SectionHeading from '../components/ui/SectionHeading';
 import { school } from '../data/schoolData';
 import { fadeUp, staggerContainer } from '../hooks/useScrollReveal';
 
-const icons = { BookOpen, Bus, Cpu, Landmark, Monitor, Shield, Trophy, Wind };
+const icons = { BookOpen, Bus, Cpu, Home: HomeIcon, Landmark, Monitor, Salad, Shield, Trophy, Wind };
 
 export default function Vision() {
   return (

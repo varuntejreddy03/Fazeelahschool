@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: #F7F3ED;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 @keyframes pulse-gold {
