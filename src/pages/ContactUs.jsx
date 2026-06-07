@@ -104,7 +104,7 @@ export default function ContactUs() {
               </div>
               <div className="border border-brand-light bg-white p-5 shadow-brand">
                 <MessageCircle className="mb-3 text-brand-gold" size={24} />
-                <p className="font-body text-sm font-semibold text-brand-navy">WhatsApp: {school.phones[0]}</p>
+                <p className="font-body text-sm font-semibold text-brand-navy">WhatsApp: {school.whatsappFormatted}</p>
               </div>
             </div>
           </motion.div>

@@ -4,6 +4,42 @@ import { MessageCircle, MapPin, Phone, Mail } from 'lucide-react';
 import { school } from '../../data/schoolData';
 import { fadeIn } from '../../hooks/useScrollReveal';
 
+const Facebook = ({ size = 18, className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const Instagram = ({ size = 18, className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export default function Footer() {
   return (
     <>
@@ -17,16 +53,42 @@ export default function Footer() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="font-display text-xl mb-4">{school.shortName}</h3>
+            <img
+              src="/images/fazeelah-logo-clean.png"
+              alt={school.name}
+              className="h-12 w-auto object-contain bg-white rounded p-1 mb-4"
+            />
             <p className="font-body text-white/70 text-sm leading-relaxed">{school.subTagline}</p>
-            <a
-              href={`https://wa.me/${school.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 text-green-400 hover:text-green-300 font-body text-sm"
-            >
-              <MessageCircle size={16} /> WhatsApp Us
-            </a>
+            <div className="flex items-center gap-4 mt-5">
+              <a
+                href={`https://wa.me/${school.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-body text-sm font-semibold transition-colors"
+                title="WhatsApp Us"
+              >
+                <MessageCircle size={16} /> WhatsApp Us
+              </a>
+              <span className="text-white/20">|</span>
+              <a
+                href={school.socials.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-brand-gold transition-colors"
+                title="Visit our Facebook Page"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href={school.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-brand-gold transition-colors"
+                title="Visit our Instagram Profile"
+              >
+                <Instagram size={18} />
+              </a>
+            </div>
           </div>
 
           <div>

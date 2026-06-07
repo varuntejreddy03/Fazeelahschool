@@ -47,15 +47,7 @@ export default function Home() {
     >
       <HeroSection />
 
-      <section className="bg-brand-navy py-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 px-4 lg:grid-cols-4">
-          {school.stats.map((stat, index) => (
-            <StatBadge key={stat.label} value={stat.value} label={stat.label} isLast={index === school.stats.length - 1} />
-          ))}
-        </div>
-      </section>
-
-      <section className="border-t border-white/10 bg-brand-navy py-7">
+      <section className="bg-brand-navy py-7">
         <motion.div
           variants={staggerContainer}
           initial="hidden"

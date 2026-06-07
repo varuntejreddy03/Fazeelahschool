@@ -16,10 +16,15 @@ export const school = {
   tagline: "Education With Values",
   subTagline: "A Foundation for Life-Long Success",
 
-  address: "Bathalapalli Road, Nagalur Village, Dharmavaram 515672, Sri Sathya Sai District, AP",
+  address: "Bathalapalli Road, Nagalur Village, Dharmavaram, Sri Sathya Sai District, AP - 515672",
   phones: ["+91 70753 55455", "+91 75077 44544"],
   phone: ["+91 70753 55455", "+91 75077 44544"],
-  whatsapp: "917075355455",
+  whatsapp: "917207877077",
+  whatsappFormatted: "+91 72078 77077",
+  socials: {
+    instagram: "https://www.instagram.com/fazeelahenglishmediumschool?igsh=MTg4bWdyMHI1aGltcQ==",
+    facebook: "https://www.facebook.com/share/18qHcmgjXv/",
+  },
   emails: {
     general: "fazeelahschool@gmail.com",
     admissions: "Admissions@fazeelah.com",
