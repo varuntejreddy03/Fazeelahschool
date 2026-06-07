@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, Heart, ShieldCheck, Star } from 'lucide-react';
+import { CheckCircle2, GraduationCap, Heart, ShieldCheck, Star } from 'lucide-react';
 
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
@@ -65,6 +65,46 @@ export default function AboutUs() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      <section id="faculty" className="bg-white py-16 md:py-24 border-t border-brand-light/20">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <SectionHeading
+            eyebrow="Our Educators"
+            title="Meet Our Team"
+            subtitle={school.faculty}
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-8">
+            {[
+              {
+                role: "School Leadership",
+                desc: "Guiding the school's vision, academic standards, and residential care with dedication.",
+                icon: ShieldCheck,
+              },
+              {
+                role: "Primary School Faculty",
+                desc: "Nurturing early childhood development and foundational literacy from Nursery to Class IV.",
+                icon: Heart,
+              },
+              {
+                role: "Middle School Faculty",
+                desc: "Subject-matter experts fostering analytical skills in Mathematics, Science, and Social Studies.",
+                icon: GraduationCap,
+              },
+              {
+                role: "Specialist Instructors",
+                desc: "Qualified coaches and trainers for Computer Literacy, Physical Education, and Creative Arts.",
+                icon: Star,
+              }
+            ].map(({ role, desc, icon: Icon }) => (
+              <div key={role} className="border border-brand-light bg-brand-cream p-6 shadow-brand">
+                <Icon className="mb-4 text-brand-gold" size={28} strokeWidth={1.8} />
+                <h3 className="font-display text-xl text-brand-navy">{role}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-brand-muted">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

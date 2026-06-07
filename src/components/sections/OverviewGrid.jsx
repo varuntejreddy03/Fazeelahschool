@@ -24,7 +24,7 @@ const cards = [
     title: "Faculty & Staff",
     body: "Experienced teachers focused on helping every student reach their full potential.",
     cta: "Meet Our Team",
-    link: "/about",
+    link: "/about#faculty",
     Icon: Users,
   },
   {
