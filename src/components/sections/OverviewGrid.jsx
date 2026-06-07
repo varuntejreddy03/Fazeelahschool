@@ -17,7 +17,7 @@ const cards = [
     title: "Our Programs",
     body: "Strong academics with value-based learning that prepares students for school and life.",
     cta: "Explore",
-    link: "/vision",
+    link: "/mission#programs",
     Icon: BookOpen,
   },
   {
@@ -39,7 +39,7 @@ const cards = [
     title: "Campus Life",
     body: "Digital classrooms, sports, transport, hostel support, and a secure campus environment.",
     cta: "See Campus",
-    link: "/vision",
+    link: "/vision#campus-life",
     Icon: Landmark,
   },
   {

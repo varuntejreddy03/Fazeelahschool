@@ -46,7 +46,7 @@ export default function Vision() {
         </div>
       </section>
 
-      <section className="bg-brand-navy py-16 md:py-24">
+      <section id="campus-life" className="bg-brand-navy py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <SectionHeading eyebrow="What Sets Us Apart" title="Why Choose Fazeelah" subtitle="Modern facilities, strong academics, and a secure campus support every child's growth." dark />
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">

@@ -21,7 +21,7 @@ export default function Mission() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-24">
+      <section id="programs" className="bg-white py-16 md:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:px-8 lg:grid-cols-2">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="overflow-hidden rounded-2xl shadow-brand">
             <img src="/images/school-angle-front-left.png" alt="Side angle of Fazeelah school" className="aspect-[4/3] w-full object-cover" loading="lazy" />
