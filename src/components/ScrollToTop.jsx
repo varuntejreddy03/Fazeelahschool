@@ -6,15 +6,25 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.slice(1));
-      if (element) {
-        setTimeout(() => {
+      const elementId = hash.slice(1);
+      let attempts = 0;
+      
+      const interval = setInterval(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-        return;
-      }
+          clearInterval(interval);
+        }
+        attempts++;
+        if (attempts >= 15) {
+          clearInterval(interval);
+        }
+      }, 80);
+
+      return () => clearInterval(interval);
+    } else {
+      window.scrollTo(0, 0);
     }
-    window.scrollTo(0, 0);
   }, [pathname, hash]);
 
   return null;
