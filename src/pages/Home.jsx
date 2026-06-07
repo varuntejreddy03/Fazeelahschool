@@ -181,22 +181,6 @@ export default function Home() {
 
       <FacilitiesStrip />
 
-      <section className="bg-brand-cream py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <SectionHeading eyebrow="Testimonials" title="Parents Trust Fazeelah" subtitle="Families value the balance of care, academics, and discipline." />
-          <div className="grid gap-6 md:grid-cols-3">
-            {school.testimonials.map((testimonial) => (
-              <div key={testimonial.name} className="border border-brand-light bg-white p-6 shadow-brand">
-                <p className="mb-4 font-body text-brand-gold">{'★'.repeat(testimonial.stars)}</p>
-                <p className="font-serif text-xl italic leading-relaxed text-brand-navy">"{testimonial.text}"</p>
-                <p className="mt-5 font-body font-semibold text-brand-navy">{testimonial.name}</p>
-                <p className="font-body text-sm text-brand-muted">{testimonial.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <SectionHeading eyebrow="Gallery" title="Campus Moments" subtitle="Real views from Fazeelah School facilities and campus life." />

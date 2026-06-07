@@ -8,13 +8,6 @@ export default function HeroSection() {
     <section className="relative overflow-hidden bg-brand-navy pt-16 md:pt-20">
       <div className="grid min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] lg:grid-cols-[0.45fr_0.55fr]">
         <div className="relative z-10 flex items-center bg-brand-navy px-4 py-10 md:px-8 lg:justify-end lg:py-14">
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(135deg, #C9A84C 0, #C9A84C 1px, transparent 1px, transparent 34px)',
-            }}
-          />
           <div className="relative w-full max-w-2xl lg:max-w-lg">
           <motion.div
             initial={{ opacity: 0, y: 18 }}

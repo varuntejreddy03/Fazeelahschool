@@ -271,11 +271,13 @@ export const school = {
 
   gallery: [
     "school-angle-front-wide.png",
-    "school-angle-front-left.png",
-    "school-angle-aerial.png",
-    "students-campus-run.jpeg",
+    "facility-classroom.jpeg",
+    "facility-sports-arena.jpg",
+    "facility-library.jpg",
+    "facility-science-lab.jpg",
+    "facility-safe-transport.jpg",
+    "facility-secure-campus.jpg",
     "hostel-dining-hall.jpeg",
-    "food-healthy-tray.jpeg",
   ],
 
   navLinks: [
