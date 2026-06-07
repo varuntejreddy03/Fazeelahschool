@@ -175,7 +175,7 @@ export const school = {
       title: "Comfortable Classrooms",
       label: "Comfortable Classrooms",
       desc: "Fully air-conditioned classrooms for a conducive learning environment.",
-      image: "school-angle-front-left.png",
+      image: "facility-classroom.jpeg",
     },
     {
       icon: "Home",
