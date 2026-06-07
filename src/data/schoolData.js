@@ -8,7 +8,7 @@ export const school = {
   hero: {
     headline: "Your Child's Journey to Success Begins Here",
     subheading:
-      "Fazeelah English Medium School provides quality education, modern infrastructure, value-based learning, and a safe environment where every child can learn, grow, and succeed.",
+      "Fazeelah English Medium School in Dharmavaram integrates concept-driven academics with strong moral values, modern smart-classroom technology, physical sports, and full CCTV campus security.",
     cta1: "Apply for Admission",
     cta2: "Schedule a Campus Visit",
   },
@@ -72,31 +72,33 @@ export const school = {
   },
 
   about:
-    "Fazeelah English Medium School is dedicated to providing quality education in a safe, nurturing, and inspiring learning environment. We focus on academic excellence, character development, and the overall growth of every child. With experienced educators, modern teaching methods, and a student-centered approach, we strive to help learners build confidence, knowledge, and essential life skills for a successful future. At Fazeelah, we believe every child has unique potential, and our goal is to empower students to become responsible, confident, and lifelong learners.",
+    "Fazeelah English Medium School stands as a beacon of academic excellence and value-based education in Dharmavaram. Our school is structured around modern teaching methods, individual student attention, and a secure semi-boarding and hostel environment. We are committed to fostering critical thinking, self-discipline, and the character traits necessary for students to become future leaders.",
   philosophy:
     "Fazeelah English Medium School was founded with a vision to integrate quality academic learning with strong ethical values. We believe that education is not just about academic success, but about shaping character, building confidence, and preparing young minds to become responsible citizens of tomorrow.",
+  aboutStory:
+    "What started as a vision to make structured English-medium education accessible to families in Dharmavaram has grown into a premier campus community. We believe in child-centric teaching, where class lectures are combined with interactive digital media, physical play, and personal character mentoring.",
   faculty:
     "Our experienced educators use modern teaching methods and a student-centered approach to help learners build confidence, knowledge, and essential life skills.",
 
   vision:
-    "To be a leading educational institution that nurtures knowledgeable, confident, and responsible individuals who contribute positively to society and excel in a rapidly changing world.",
+    "Our vision is to build an inspiring benchmark of learning that nurtures intellectually curious, morally strong, and socially responsible global citizens. We strive to guide a generation of independent thinkers who pursue excellence with integrity and make meaningful contributions to the world.",
 
   mission: [
-    "To provide high-quality education in a safe, inclusive, and supportive environment.",
-    "To foster academic excellence, critical thinking, and creativity among students.",
-    "To instill strong moral values, discipline, and respect for others.",
-    "To encourage holistic development through academics, sports, and co-curricular activities.",
-    "To empower every student with the skills and confidence needed for lifelong learning and success.",
+    "Concept-Driven Academics: Deliver a rigorous, smart-classroom curriculum that emphasizes critical thinking, digital literacy, and scientific inquiry.",
+    "Character and Ethics: Instill timeless values of honesty, respect, and responsibility into daily school routines.",
+    "Inclusive and Nurturing Space: Provide a safe, CCTV-monitored campus where every child feels secure to learn and grow.",
+    "Holistic Physical Development: Encourage teamwork and physical health through structured sports, assemblies, and co-curricular programs.",
+    "Personalized Attention: Maintain optimal teacher-student ratios to support the unique strengths and learning styles of every child.",
   ],
   missionText:
-    "To provide high-quality education in a safe, inclusive, and supportive environment while fostering academic excellence, critical thinking, creativity, strong moral values, discipline, and holistic development.",
+    "To provide a secure, concept-driven learning environment that balances modern digital education with moral values, physical sports, and personal attention for every student.",
   community:
-    "We are proud to be part of a diverse and inclusive community that values collaboration, empathy, and respect.",
+    "We believe that a child’s education flourishes when the school, home, and community work in unison. Our campus fosters a supportive environment where parents are close partners, and students are encouraged to practice empathy, build strong bonds, and respect diverse perspectives. Here, everyone belongs.",
 
   principal: {
     name: "Principal",
     message:
-      "At Fazeelah English Medium School, we believe in empowering young minds with knowledge, values and confidence to succeed in a rapidly changing world. Together, let us build a better tomorrow for our children.",
+      "True education is the harmonious development of physical, mental, and moral faculties. At Fazeelah, our mission is to cultivate minds that are capable of critical reasoning, hearts that are filled with empathy, and lives that are guided by values. We welcome you to join our family in building a bright, successful future for your child.",
   },
 
   whyFazeelah: [

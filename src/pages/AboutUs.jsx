@@ -29,7 +29,7 @@ export default function AboutUs() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:px-8 lg:grid-cols-2">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <SectionHeading eyebrow="Our Story" title="Education With Values" centered={false} />
-            <p className="font-body text-lg leading-relaxed text-brand-muted">{school.philosophy}</p>
+            <p className="font-body text-lg leading-relaxed text-brand-muted">{school.aboutStory}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {school.whyFazeelah.map((item) => (
                 <div key={item} className="flex items-start gap-3 border border-brand-light bg-brand-cream p-4">
