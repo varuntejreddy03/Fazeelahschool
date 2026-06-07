@@ -276,7 +276,7 @@ export const school = {
     "facility-library.jpg",
     "facility-science-lab.jpg",
     "facility-safe-transport.jpg",
-    "facility-secure-campus.jpg",
+    "hostel-bunk-beds.jpeg",
     "hostel-dining-hall.jpeg",
   ],
 
